@@ -131,7 +131,7 @@ GrantManager.prototype.obtainFromCode = function(request, code, sessionId, sessi
 
   var params = 'code=' + code + '&application_session_state=' + sessionId + '&redirect_uri=' + redirectUri + '&application_session_host=' + sessionHost;
 
-  var options = URL.parse( this.realmUrl + '/tokens/access/codes' );
+  var options = URL.parse( this.realmUrl + '/protocol/openid-connect/token' );
   var protocol = http;
 
   options.method = 'POST';
