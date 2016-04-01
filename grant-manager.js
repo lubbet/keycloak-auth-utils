@@ -198,7 +198,7 @@ GrantManager.prototype.ensureFreshness = function(grant, callback) {
   var self = this;
   var deferred = Q.defer();
 
-  var options = URL.parse( this.realmUrl + '/tokens/refresh' );
+  var options = URL.parse( this.realmUrl + '/protocol/openid-connect/token' );
 
   options.method = 'POST';
 
