@@ -129,7 +129,7 @@ GrantManager.prototype.obtainFromCode = function(request, code, sessionId, sessi
 
   var redirectUri = encodeURIComponent( request.session.auth_redirect_uri );
 
-  var params = 'code=' + code + '&application_session_state=' + sessionId + '&redirect_uri=' + redirectUri + '&application_session_host=' + sessionHost;
+  var params = 'grant_type=authorization_code&code=' + code + '&application_session_state=' + sessionId + '&redirect_uri=' + redirectUri + '&application_session_host=' + sessionHost;
 
   var options = URL.parse( this.realmUrl + '/protocol/openid-connect/token' );
   var protocol = http;
